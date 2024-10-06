@@ -1,15 +1,15 @@
 const cacheName = 'souvenir-mobil-v1';
 const assetsToCache = [
   '/',
-  '/index.html',
-  '/about.html',
-  '/contact.html',
-  '/styles.css',
-  '/images/showroom.jpg',
-  '/images/souvenir1.jpg',
-  '/images/souvenir2.jpg',
-  '/images/icon-512x512.png',
-  '/offline.html'
+  '/TUGASDESAINWEB/index.html',
+  '/TUGASDESAINWEB/about.html',
+  '/TUGASDESAINWEB/contact.html',
+  '/TUGASDESAINWEB/styles.css',
+  '/TUGASDESAINWEB/images/showroom.jpg',
+  '/TUGASDESAINWEB/images/souvenir1.jpg',
+  '/TUGASDESAINWEB/images/souvenir2.jpg',
+  '/TUGASDESAINWEB/images/icon-512x512.png',
+  '/TUGASDESAINWEB/offline.html'
 ];
 
 self.addEventListener('install', (event) => {
