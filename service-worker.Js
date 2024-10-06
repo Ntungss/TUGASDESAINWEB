@@ -38,7 +38,7 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(
         fetch(event.request).catch(() => {
             // Jika fetch gagal, kembalikan offline.html
-            return caches.match('/offline.html');
+            return caches.match('/TUGASDESAINWEB/offline.html');
         })
     );
 });
