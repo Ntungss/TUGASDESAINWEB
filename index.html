@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showroom Souvenir Mobil</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+
+</head>
+<body>
+    <header>
+        <h1>Showroom Souvenir Mobil</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="contact.html">Kontak Kami</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Selamat Datang di Showroom Souvenir Kami!</h2>
+            <img src="images/showroom.jpg" alt="Showroom Mobil" class="hero-image">
+            <p>Temukan berbagai souvenir unik bertemakan mobil di showroom kami!</p>
+        </section>
+        
+        <section class="products">
+            <h2>Produk Unggulan</h2>
+            <div class="product-item">
+                <img src="images/souvenir1.jpg" alt="Souvenir 1">
+                <h3>Bemper BMW E60 </h3>
+                <h3>Rp 71.000.000,00</h3>
+                <p>Brand	TYG
+                    Product group	Bumper
+                    Fitting Position	Front
+                    Chemical Properties	Paintable
+                        
+                    OE Reference	
+                    BMW	51 11 7 111 740
+                        
+                        
+                    Compatible Vehicle	Model Year
+                    5 (E60) 520 i 	07.2003-03.2010
+                    5 (E60) 523 i 	10.2004-02.2007
+                    5 (E60) 530 i 	03.2007-12.2009
+                    5 (E60) 530 i 	03.2005-03.2007
+                    5 (E60) 530 i 	12.2001-02.2005
+                    5 (E60) M5 	09.2004-12.2009</p>
+            </div>
+            <div class="product-item">
+                <img src="images/souvenir2.jpg" alt="Souvenir 2">
+                <h3>Spoiler BMW </h3>
+                <h3>Rp.40.000.000,00 </h3>
+                <p>BMW M-Performance Original
+                    With part Number wing carbon BMW M2/2C/3/4 bisa juga untuk non m.</p>
+            </div>
+        </section>
+    </main>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(function(registration) {
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    }, function(error) {
+                        console.log('ServiceWorker registration failed: ', error);
+                    });
+            });
+        }
+    </script>
+    <button class="add-button" style="display:none">Install Aplikasi</button>
+
+    <!-- Add to Home Screen Feature -->
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            let deferredPrompt;
+            const addBtn = document.querySelector('.add-button');
+            if (addBtn) {
+                addBtn.style.display = 'none'; 
+            }
+
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (addBtn) {
+                    addBtn.style.display = 'block'; 
+                }
+
+                addBtn.addEventListener('click', () => {
+                    addBtn.style.display = 'none';
+                    deferredPrompt.prompt();
+                    deferredPrompt.userChoice.then((choiceResult) => {
+                        if (choiceResult.outcome === 'accepted') {
+                            console.log('User accepted the A2HS prompt');
+                        } else {
+                            console.log('User dismissed the A2HS prompt');
+                        }
+                        deferredPrompt = null;
+                    });
+                });
+            });
+        });
+    </script>
+    <footer>
+        <p>&copy; 2024 Showroom Souvenir Mobil</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showroom Souvenir Mobil</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+    <header>
+        <h1>Showroom Souvenir Mobil</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="contact.html">Kontak Kami</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1 align="center">Contact Person</h1>
+    <p align="center">Sosial Media : </p>
+    <div align="center" id="sosialmediaa">
+        <a
+          class="instagram"
+          href="https://www.instagram.com/gilangshrl08/"
+          target="_blank"
+          ><img
+            alt="Instagram"
+            src="https://img.shields.io/badge/Instagram-%231877F2.svg?style=social&logo=Instagram&logoColor=royal blue"
+            width="150px"
+        /></a>
+        <br /><br />
+        <a class="email" href="mailto:gilangshirel2005@gmail.com" target="_blank"
+          ><img
+            alt="Gmail"
+            src="https://img.shields.io/badge/Gmail-%231877F2.svg?style=social&logo=Gmail&logoColor=orange"
+            width="120px"
+        /></a>
+    </div>
+
+ 
+    <h2 align="center">Kirimkan Saya Pesan</h2>
+    <form id="contactForm" align="center" onsubmit="handleFormSubmit(event)">
+        <label for="name">Nama:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="category">Kategori Pesan:</label><br>
+        <select id="category" name="category" required>
+            <option value="question">Pertanyaan</option>
+            <option value="suggestion">Saran</option>
+        </select><br><br>
+
+        <label for="message">Pesan:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+        <label>Ingin Menerima Balasan?</label><br>
+        <input type="radio" id="yes" name="reply" value="yes" required>
+        <label for="yes">Ya</label>
+        <input type="radio" id="no" name="reply" value="no" required>
+        <label for="no">Tidak</label><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
